@@ -1,0 +1,29 @@
+/* 
+ * nbaMVPquiz
+ * This code prompts the user to list all the NBA MVPS from 2023-2024(the most recent as of writing)
+ * to 1955-1956 (the earliest MVP). The code will track the number of MVPs the user got right/wrong.
+ * Then it will display the name of the MVPS you guessed in order.
+ */
+
+import java.util.Scanner;
+
+public class nbaMVPQuizApp
+{
+  public static void main (String [] args)
+  {
+    Scanner input = new Scanner (System.in);
+    int correct = 0;
+    String userin = "";
+    String [] mvps = new String [68];
+    
+    System.out.println("NOTE: ALL answers must include FULL first and last name to be correct.");
+    System.out.println("Who was the 2023-2024 MVP?");
+    userin = input.next();
+    if(userin.equals("Nikola Jokic"))
+    {
+      correct += 1;
+    }
+    mvps[userin]++;
+    System.out.println("You got " + correct + "/68 correct!");
+  }
+}
